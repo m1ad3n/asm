@@ -7,7 +7,6 @@ O: .long 0
 .section .text
 .global _start
 
-
 _start:	movl A, %eax
 		movl B, %ebx
 		movl K, %ecx
@@ -22,5 +21,5 @@ _end:	movl %ecx, K
 		movl %eax, O
 
 _exit:	movl $1, %eax
-		movl O, %ebx
+		movl K, %ebx
 		int $0x80
